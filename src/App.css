@@ -4,13 +4,11 @@ html, body, #root {
 }
 
 .App {
-  background-color: red;
   height: 100%;
   width: 100%;
 }
 
 .button-main-page {
-  background-color: aqua;
   width: 20rem;
   height: 40rem;
 }
