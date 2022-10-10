@@ -1,29 +1,27 @@
 import axios from 'axios'
 
-const audience = 'http://localhost:5001/api/v1/messages'
+const API_ROUTE = process.env.API
 
 class MessageDataService {
 
   static async authenticateUser(userData) {
-    return axios.post(`${audience}/authenticate`, {userData});
+    return axios.post(`${ API_ROUTE }/authenticate`, { userData });
   }
 
   static async getMessages(token) {
-    return axios.get(`${audience}/${token}`, 
-                      { headers: { 'Authorization': `${token}` }})
+    return axios.get(`${ API_ROUTE }/${ token }`, 
+                       { headers: { "Authorization": `${token}` }})
   }
 
   static async addMessage(data, token) {
-    return axios.put(`${audience}/message`,
-                       { 
-                        token: token,
-                        message: data.message 
-                       },
+    return axios.put(`${ API_ROUTE }/message`,
+                       { token: token, 
+                         message: data.message },
                        { headers: { "Authorization": `${token}` }})
   }
 
   static async deleteMessage(data, token) {
-    return axios.delete(`${ audience }/message/${token}/${ data.messageId }`, 
+    return axios.delete(`${ API_ROUTE }/message/${token}/${ data.messageId }`, 
                           { headers: { "Authorization": `${token}` }})
   }
 
