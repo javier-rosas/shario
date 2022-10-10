@@ -1,6 +1,6 @@
 import './App.css'
-import Code from './QR'
-
+import Code from './components/QR'
+import { Route, Routes } from "react-router-dom"
 
 function App() {
 
@@ -11,6 +11,10 @@ function App() {
       <Code/>
       <br/>
       <br/>
+      <Routes>
+        <Route exact path="/" element={<App/>}> </Route>
+        <Route exact path="/home" element={<Home/>}> </Route>
+      </Routes>
     </div>
   );
 }

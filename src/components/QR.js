@@ -1,7 +1,7 @@
 import QRCode from "react-qr-code";
 
 const Code = () => {
-  return <QRCode value="http://localhost:3000/" />
+  return <QRCode value={ process.env.APP } />
 }
 
 export default Code
