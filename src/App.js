@@ -1,6 +1,8 @@
 import './App.css'
 import Code from './components/QR'
 import { Route, Routes } from "react-router-dom"
+import Home from './components/Home'
+
 
 function App() {
 
@@ -8,11 +10,11 @@ function App() {
     <div className='App'>
       <br/>
       <br/>
-      <Code/>
+      {/* <Code/> */}
       <br/>
       <br/>
       <Routes>
-        <Route exact path="/" element={<App/>}> </Route>
+        {/* <Route exact path="/" element={<App/>}> </Route> */}
         <Route exact path="/home" element={<Home/>}> </Route>
       </Routes>
     </div>
