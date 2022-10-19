@@ -1,5 +1,9 @@
-// To convert from image to PDF
+// To convert from PDF to image
 var newImg, showPdf;
+
+// needed import
+// var pdf2img = require('pdf-img-convert');
+
 
 function loadImg(event) {
     showPdf = document.getElementById('showPdf');
@@ -27,3 +31,29 @@ function imageConvert() {
     // Saves as PDF
     doc.save('sharioPDF.pdf');
 }
+
+function imageConvertUsingPdjJs() {
+    // Both HTTP and local paths are supported
+    var outputImages1 = pdf2img.convert('conversions/pdfToImage/pdfs/sample.pdf../pdf_in_local_filesystem.pdf');
+
+    // From here, the images can be used for other stuff or just saved if that's required:
+
+    var fs = require('fs');
+
+    outputImages1.then(function(outputImages) {
+        for (i = 0; i < outputImages.length; i++)
+            fs.writeFile("output"+i+".png", outputImages[i], function (error) {
+            if (error) { console.error("Error: " + error); }
+            });
+        });
+}
+
+/*
+Steps for pdf to img convert:
+
+npm install pdf-img-convert
+
+https://github.com/ol-th/pdf-img-convert.js
+
+Facing dependency issues when installing
+*/
