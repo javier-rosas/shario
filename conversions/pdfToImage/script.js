@@ -1,8 +1,9 @@
 // To convert from PDF to image
 var newImg, showPdf;
 
-// needed import
+// needed imports
 // var pdf2img = require('pdf-img-convert');
+// var fs = require("fs");
 
 
 function loadImg(event) {
