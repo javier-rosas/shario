@@ -4,6 +4,7 @@ import ScrollToBottom from "react-scroll-to-bottom"
 
 const ChatApp = ({ socket, username, room }) => {
 
+  const [isConnected, setIsConnected] = useState(socket.connected);
   const [currentMessage, setCurrentMessage] = useState("")
   const [messageList, setMessageList] = useState([])
 
@@ -19,16 +20,39 @@ const ChatApp = ({ socket, username, room }) => {
           new Date(Date.now()).getMinutes(),
       }
       await socket.emit("send_message", messageData)
+      console.log("send message", messageData)
       setMessageList((list) => [...list, messageData])
       setCurrentMessage("")
     }
   }
 
+  // useEffect(() => {
+  //   socket.on("receive_message", (data) => {
+  //     console.log("received message:", data)
+  //     setMessageList((list) => [...list, data])
+  //   })
+  // }, [socket])
+
   useEffect(() => {
-    socket.on("receive_message", (data) => {
+    socket.on('connect', () => {
+      setIsConnected(true);
+    });
+
+    socket.on('disconnect', () => {
+      setIsConnected(false);
+    });
+
+    socket.on('receive_message', (data) => {
+      console.log("received message:", data)
       setMessageList((list) => [...list, data])
-    })
-  }, [socket])
+    });
+
+    return () => {
+      socket.off('connect');
+      socket.off('disconnect');
+      socket.off('receive_message');
+    };
+  }, []);
 
   return (
     <div className="chat-window">

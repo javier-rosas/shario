@@ -2,7 +2,6 @@ import io from "socket.io-client"
 import { useState } from "react"
 import ChatApp from "./ChatApp.js"
 import './Home.css'
-
 const socket = io.connect("http://192.168.4.23:5001")
 
 
