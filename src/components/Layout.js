@@ -3,7 +3,6 @@ import { useState, useEffect, useLayoutEffect } from "react"
 import './Layout.css'
 
 
-
 const Layout = () => {
   const { collapseSidebar } = useProSidebar()
   const width= useState(window.screen.width)

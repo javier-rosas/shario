@@ -1,7 +1,9 @@
 import io from "socket.io-client"
 import { useState } from "react"
-import Chat from "./Chat.js"
-const socket = io.connect("http://localhost:5001")
+import ChatApp from "./ChatApp.js"
+import './Home.css'
+
+const socket = io.connect("http://192.168.4.23:5001")
 
 
 const Home = () => {
@@ -18,7 +20,7 @@ const Home = () => {
   }
 
   return (
-    <div className="App">
+    <div className="Home">
       {!showChat ? (
         <div className="joinChatContainer">
           <h3>Join A Chat</h3>
@@ -39,7 +41,7 @@ const Home = () => {
           <button onClick={joinRoom}>Join A Room</button>
         </div>
       ) : (
-        <Chat socket={socket} username={username} room={room} />
+        <ChatApp socket={socket} username={username} room={room} />
       )}
     </div>
   )

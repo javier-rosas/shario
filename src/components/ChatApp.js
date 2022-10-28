@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react"
 import ScrollToBottom from "react-scroll-to-bottom"
 
 
-const Chat = ({ socket, username, room }) => {
+const ChatApp = ({ socket, username, room }) => {
 
   const [currentMessage, setCurrentMessage] = useState("")
   const [messageList, setMessageList] = useState([])
@@ -18,7 +18,6 @@ const Chat = ({ socket, username, room }) => {
           ":" +
           new Date(Date.now()).getMinutes(),
       }
-
       await socket.emit("send_message", messageData)
       setMessageList((list) => [...list, messageData])
       setCurrentMessage("")
@@ -76,4 +75,4 @@ const Chat = ({ socket, username, room }) => {
   );
 }
 
-export default Chat;
+export default ChatApp;
