@@ -1,9 +1,17 @@
 
-
 .messageList {
-    background-color: yellow;
+    /* background-color: yellow;
     position: absolute;
-    right: 0%;
+    right: 10%;
+    bottom: 10%; */
+    --rad: 20px;
+    --rad-sm: 3px;
+    font: 16px/1.5 sans-serif;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    max-width: 500px;
+    margin: auto;;
 }
 
 .chat-bubble {
@@ -11,10 +19,17 @@
     border-radius:2rem;
     flex-direction: row;
     align-self: flex-end;
-    margin-left: 4rem;
     margin: 1%;
 
 }
+
+.msg.sent {
+    border-radius: var(--rad) var(--rad-sm) var(--rad-sm) var(--rad);
+    background: #42a5f5;
+    color: #fff;
+    /* moves it to the right */
+    margin-left: auto;
+  }
 
 .chat-text {
    text-align: center;

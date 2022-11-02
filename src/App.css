@@ -14,8 +14,8 @@ html, body, #root {
 }
 
 .inputbox {
- background-color: white;
- width: 80rem;
+ background-color: blue;
+ width: 100%;
  border-color: white;
  border: 0ch;
  position: inline;
@@ -26,7 +26,7 @@ html, body, #root {
   background-color: red;
   position: absolute !important;
   bottom: 0 !important;
-  right: 0;
+  right: 1%;
   height: 85%;
   width: 80%;
   display: flex;
@@ -39,7 +39,6 @@ html, body, #root {
   bottom: 0;
   background-color: white;
   position: absolute;
-  position: fixed;
   border: solid;
   border-color: #D0D4D9;
   border-radius: 1rem;
