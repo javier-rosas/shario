@@ -1,0 +1,37 @@
+
+
+.messageList {
+    background-color: yellow;
+    position: absolute;
+    right: 0%;
+}
+
+.chat-bubble {
+    background-color: #278EFF;
+    border-radius:2rem;
+    flex-direction: row;
+    align-self: flex-end;
+    margin-left: 4rem;
+    margin: 1%;
+
+}
+
+.chat-text {
+   text-align: center;
+}
+
+.chat-text-time {
+    text-align: right;
+}
+
+.chat-text-name {
+    text-align: right;
+}
+
+.main {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-color: yellow;
+}

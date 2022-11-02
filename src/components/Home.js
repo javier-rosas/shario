@@ -1,7 +1,6 @@
 import io from "socket.io-client"
 import { useState } from "react"
 import ChatApp from "./ChatApp.js"
-import './Home.css'
 const socket = io.connect("http://192.168.4.23:5001")
 
 
@@ -19,9 +18,13 @@ const Home = () => {
   }
 
   return (
-    <div className="Home">
+    <div className="main-thing">
+      <h2 className='welcome-text'>
+                        Welcome to Shario!
+        Throw anything in the chat. We’ll take care of the rest.
+      </h2>
       {!showChat ? (
-        <div className="joinChatContainer">
+        <div>
           <h3>Join A Chat</h3>
           <input
             type="text"

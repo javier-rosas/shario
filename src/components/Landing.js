@@ -1,21 +1,21 @@
 import Layout from './Layout'
+import Home from './Home'
 
-const Landing = () => {
+function Landing () {
 
 
   return (
     <div className='App'>
-      <img alt="group" src="/images/Group.png"></img>
+      <img className='logo' alt="group" src="/images/shario-logo (2).png"></img>
       <Layout/>
       <div className='chat-container'>
-      <h2 className='welcome-text'>
-                        Welcome to Shario!
-        Throw anything in the chat. We’ll take care of the rest.
-      </h2>
+      
       <form className='searchchat'>
         <input className='input-searchchat' type="text" placeholder="  Search chat..."></input>
       </form>
-      <div className='chatbar'>
+      <Home/>
+
+      {/* <div className='chatbar'>
       <table className='chatbox-buttons'>
       <th><input type="image" alt="pencil" src="/images/pencil.png"/></th>
       <th><input type="image" alt="microphone" src="/images/microphone.png"/></th>
@@ -28,7 +28,7 @@ const Landing = () => {
       </th>
       <th><input type="image" alt="pencil" src="/images/pencil.png"/></th>
       </table>
-      </div>
+      </div> */}
       </div>
     </div>
   )}

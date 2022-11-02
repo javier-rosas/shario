@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react"
 import ScrollToBottom from "react-scroll-to-bottom"
+import './Home.css'
+import '../App.css'
+import ChatBubble from 'react-chat-bubble';
 
 
 const ChatApp = ({ socket, username, room }) => {
 
-  const [isConnected, setIsConnected] = useState(socket.connected);
   const [currentMessage, setCurrentMessage] = useState("")
   const [messageList, setMessageList] = useState([])
 
@@ -26,66 +28,49 @@ const ChatApp = ({ socket, username, room }) => {
     }
   }
 
-  // useEffect(() => {
-  //   socket.on("receive_message", (data) => {
-  //     console.log("received message:", data)
-  //     setMessageList((list) => [...list, data])
-  //   })
-  // }, [socket])
-
   useEffect(() => {
-    socket.on('connect', () => {
-      setIsConnected(true);
-    });
-
-    socket.on('disconnect', () => {
-      setIsConnected(false);
-    });
-
     socket.on('receive_message', (data) => {
       console.log("received message:", data)
       setMessageList((list) => [...list, data])
-    });
-
-    return () => {
-      socket.off('connect');
-      socket.off('disconnect');
-      socket.off('receive_message');
-    };
+    })
   }, []);
-
+console.log(messageList)
   return (
-    <div className="chat-window">
-      <div className="chat-header">
-        <p>Live Chat</p>
-      </div>
-      <div className="chat-body">
-        <ScrollToBottom className="message-container">
+    <div className="main">
+      <div className="messageList">
           {messageList.map((messageContent) => {
             return (
-              <div
-                className="message"
+             
+              <div className="chat-bubble"
                 id={username === messageContent.author ? "you" : "other"}
               >
                 <div>
-                  <div className="message-content">
-                    <p>{messageContent.message}</p>
+                  <div>
+                    <p className="chat-text">{messageContent.message}</p>
                   </div>
-                  <div className="message-meta">
-                    <p id="time">{messageContent.time}</p>
-                    <p id="author">{messageContent.author}</p>
+                  <div>
+                    <p className="chat-text-time" id="time">{messageContent.time}</p>
+                    <p className="chat-text-name" id="author">{messageContent.author}</p>
                   </div>
                 </div>
               </div>
             )
           })}
-        </ScrollToBottom>
       </div>
-      <div className="chat-footer">
-        <input
+
+      <div>
+      <div className="chatbar" >
+      <table className='chatbox-buttons'>
+      <th><input type="image" alt="pencil" src="/images/pencil.png"/></th>
+      <th><input type="image" alt="microphone" src="/images/microphone.png"/></th>
+      <th><input type="image" alt="docup" src="/images/docup.png"/></th>
+      <th><input type="image" alt="photo" src="/images/photo.png"/></th>
+      <th>
+      <input
+          className="inputbox"
           type="text"
           value={currentMessage}
-          placeholder="Hey..."
+          placeholder="type..."
           onChange={(event) => {
             setCurrentMessage(event.target.value)
           }}
@@ -93,7 +78,12 @@ const ChatApp = ({ socket, username, room }) => {
             event.key === "Enter" && sendMessage()
           }}
         />
-        <button onClick={sendMessage}>&#9658;</button>
+      </th>
+      <th><button onClick={sendMessage}>&#9658;</button></th>
+      </table>
+      </div>
+      
+        
       </div>
     </div>
   );
