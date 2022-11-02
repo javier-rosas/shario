@@ -19,10 +19,6 @@ const Home = () => {
 
   return (
     <div className="main-thing">
-      <h2 className='welcome-text'>
-                        Welcome to Shario!
-        Throw anything in the chat. We’ll take care of the rest.
-      </h2>
       {!showChat ? (
         <div>
           <h3>Join A Chat</h3>

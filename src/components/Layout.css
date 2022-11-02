@@ -38,6 +38,18 @@
 }
 
 .logo {
-    height: 10%;
+    height: 60%;
 }
 
+.top-container {
+    height: 20%;
+    position: relative;
+}
+
+.chat-container {
+    position: fixed;
+    background-color: white;
+    height: 80%;
+    width: 80%;
+    right: 0%;
+}

@@ -1,37 +1,66 @@
 
+.main {
+    
+}
+
 
 .messageList {
-    background-color: yellow;
-    position: absolute;
+    background-color: transparent;
+    /* position: absolute; */
+   
+    /* overflow:scroll; */
+    /* right: 10%;
+    bottom: 10%;  */
+    --rad: 20px;
+    --rad-sm: 3px;
+    font: 16px/1.5 sans-serif;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    max-width: 500px;
+    margin: auto;
     right: 0%;
+    position: absolute;
+    bottom: 10%;
+    overflow: auto !important;
+    max-height: 70%;
 }
 
-.chat-bubble {
-    background-color: #278EFF;
-    border-radius:2rem;
-    flex-direction: row;
-    align-self: flex-end;
-    margin-left: 4rem;
-    margin: 1%;
+.messageList::-webkit-scrollbar {
+    display: none;
+  }
 
-}
+
 
 .chat-text {
    text-align: center;
+   padding: 2%;
 }
 
 .chat-text-time {
     text-align: right;
+
 }
 
 .chat-text-name {
     text-align: right;
 }
 
-.main {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    background-color: yellow;
+.main-thing {
+   
+    background-color: transparent;
 }
+
+.msg-sent {
+    border-radius: var(--rad) var(--rad-sm) var(--rad-sm) var(--rad);
+    background: #42a5f5;
+    color: #fff;
+    /* moves it to the right */
+    margin-left: auto;
+    
+    overflow-wrap: break-word;
+    flex-direction: row;
+    align-self: flex-end;
+    margin: 1%;
+    Max-width: 90%;
+  }

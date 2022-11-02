@@ -41,18 +41,12 @@ console.log(messageList)
           {messageList.map((messageContent) => {
             return (
              
-              <div className="chat-bubble"
+              <div className="msg-sent"
                 id={username === messageContent.author ? "you" : "other"}
               >
-                <div>
-                  <div>
-                    <p className="chat-text">{messageContent.message}</p>
-                  </div>
-                  <div>
-                    <p className="chat-text-time" id="time">{messageContent.time}</p>
-                    <p className="chat-text-name" id="author">{messageContent.author}</p>
-                  </div>
-                </div>
+                <p className="chat-text">{messageContent.message}</p>
+                <p className="chat-text-time" id="time">{messageContent.time}</p>
+                <p className="chat-text-name" id="author">{messageContent.author}</p>
               </div>
             )
           })}

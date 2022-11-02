@@ -6,10 +6,11 @@ function Landing () {
 
   return (
     <div className='App'>
-      <img className='logo' alt="group" src="/images/shario-logo (2).png"></img>
-      <Layout/>
+      <div className='top-container'>
+       <img className='logo' alt="group" src="/images/shario-logo (2).png"></img>
+      </div>
+      {/* <Layout/> */}
       <div className='chat-container'>
-      
       <form className='searchchat'>
         <input className='input-searchchat' type="text" placeholder="  Search chat..."></input>
       </form>
