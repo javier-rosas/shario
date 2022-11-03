@@ -4,6 +4,9 @@ import Home from './components/Home'
 import Layout from './components/Layout'
 import Form from 'react-bootstrap/Form';
 import Chat from './components/Chat'
+import React from 'react'
+import Conversion from './components/Conversion';
+
 function App() {
 
   return (
@@ -36,7 +39,8 @@ Throw anything in the chat. We’ll take care of the rest.</h2>
 
       <Routes>
         <Route exact path="/"> </Route> 
-        <Route exact path="/home" element={<Home/>}> </Route>
+        <Route exact path="/home" component={<Home/>}> </Route>
+        <Route exact path="/conversion" component={<Conversion/>}> </Route>
       </Routes>
     </div>
   );
