@@ -1,7 +1,7 @@
 
-.main {
+/* .main {
     
-}
+} */
 
 
 .messageList {
@@ -19,7 +19,7 @@
     padding: 20px;
     max-width: 500px;
     margin: auto;
-    right: 0%;
+    right: 2rem;
     position: absolute;
     bottom: 10%;
     overflow: auto !important;
@@ -52,15 +52,17 @@
 }
 
 .msg-sent {
-    border-radius: var(--rad) var(--rad-sm) var(--rad-sm) var(--rad);
+    border-radius: var(--rad) var(--rad) 0 var(--rad);
     background: #42a5f5;
     color: #fff;
     /* moves it to the right */
     margin-left: auto;
-    
+    right: 10%;
     overflow-wrap: break-word;
     flex-direction: row;
     align-self: flex-end;
     margin: 1%;
-    Max-width: 90%;
+    min-width: 10%;
+    max-width: 90%;
+    padding: 1rem;
   }
