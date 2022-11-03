@@ -1,48 +1,29 @@
-import './App.css'
 import { Route, Routes } from "react-router-dom"
 import Home from './components/Home'
+<<<<<<< HEAD
 import Layout from './components/Layout'
 import Form from 'react-bootstrap/Form';
 import Chat from './components/Chat'
 import React from 'react'
 import Conversion from './components/Conversion';
+=======
+import Landing from './components/Landing'
+import './App.css'
+>>>>>>> 6dd5c211aa48df1236680a8fbe04bdea95643924
 
 function App() {
 
   return (
-    <div className='App'>
-      <img src="/images/Group.png"></img>
-      <Layout/>
-      <div className='chat-container'>
-      <h2 className='welcome-text'>Welcome to Shario!
-Throw anything in the chat. We’ll take care of the rest.</h2>
-      <form className='searchchat'>
-       <input className='input-searchchat' type="text" placeholder="  Search chat..."></input>
-       </form>
-       <div className='chatbar'>
-       <table className='chatbox-buttons'>
-       <th><input type="image" src="/images/pencil.png"/></th>
-       <th><input type="image" src="/images/microphone.png"/></th>
-       <th><input type="image" src="/images/docup.png"/></th>
-       <th><input type="image" src="/images/photo.png"/></th>
-       <th>
-       <form>
-       <input className='inputbox' type="text" placeholder="type..."></input>
-       </form>
-       </th>
-       <th><input type="image" src="/images/pencil.png"/></th>
-       </table>
-       </div>
-    </div>
-
-
-
       <Routes>
+<<<<<<< HEAD
         <Route exact path="/"> </Route> 
         <Route exact path="/home" component={<Home/>}> </Route>
         <Route exact path="/conversion" component={<Conversion/>}> </Route>
+=======
+        <Route exact path="/" element={<Landing/>}> </Route> 
+        <Route exact path="/home" element={<Home/>}> </Route> 
+>>>>>>> 6dd5c211aa48df1236680a8fbe04bdea95643924
       </Routes>
-    </div>
   );
 }
 

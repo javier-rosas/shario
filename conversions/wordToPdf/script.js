@@ -1,39 +1,25 @@
-// To convert from image to PDF
-var newImg, showImg;
+// To convert from word to PDF
+var newPdf, showPdf;
 
 function loadImg(event) {
-    showImg = document.getElementById('showImg');
-    showImg.src = URL.createObjectURL(event.target.files[0]);
+    showPdf = document.getElementById('showImg');
+    showPdf.src = URL.createObjectURL(event.target.files[0]);
 
-    newImg = document.createElement('img');
-    newImg.src = URL.createObjectURL(event.target.files[0]);
+    newPdf = document.createElement('img');
+    newPdf.src = URL.createObjectURL(event.target.files[0]);
 
-    showImg.onload = function() {
-        URL.revokeObjectURL(showImg.src); // free memory
+    showPdf.onload = function() {
+        URL.revokeObjectURL(showPdf.src); // free memory
     }
 }
 
-// Converts any file image to a PDF file
-function pdfConvert() {
-    // For testing purposes
-    console.log(newImg);
-
-    // Will store PDF file (ref: https://github.com/parallax/jsPDF)
-    var doc = new jsPDF();
-
-    // Add the image uploaded
-    doc.addImage(newImg, 10, 10);
-
-    // Saves as PDF
-    doc.save('sharioPDF.pdf');
-}
-
+// Converts word document to a PDF file
 function wordToPdfConvert() {
     const path = require('path');
     const unoconv = require('awesome-unoconv');
     
-    const sourceFilePath = path.resolve('./myDoc.docx');
-    const outputFilePath = path.resolve('./myDoc.pdf');
+    const sourceFilePath = path.resolve('./example.docx');
+    const outputFilePath = path.resolve('./example.pdf');
     
     unoconv
     .convert(sourceFilePath, outputFilePath)

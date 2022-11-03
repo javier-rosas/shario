@@ -15,35 +15,23 @@ html, body, #root {
 
 .inputbox {
  background-color: white;
- width: 80rem;
+ 
  border-color: white;
  border: 0ch;
  position: inline;
 }
 
-
-.chat-container {
-  background-color: white;
-  position: absolute !important;
-  bottom: 0 !important;
-  right: 0;
-  height: 85%;
-  width: 80%;
-  display: flex;
-  justify-content: center;
-  margin-right: 2.5%;
-  margin-bottom: 1%;
-}
-
 .chatbar {
-  width: 100%;
+  width: 80%;
   bottom: 0;
   background-color: white;
-  position: absolute;
+  position: fixed;
   border: solid;
   border-color: #D0D4D9;
   border-radius: 1rem;
   border-width: 0.001rem;
+  margin-bottom: 2%;
+  margin-right: 2%;
 }
 
 .image-photo-btn {
@@ -57,8 +45,9 @@ th {
 
 
 .searchchat {
-right: 0%;
-position: absolute;
+right: 0.5%;
+margin-top: 1%;
+position: fixed;
 }
 
 .input-searchchat {
@@ -66,10 +55,10 @@ position: absolute;
   border-radius: 0.4rem;
   background-color: #ECECEC;
   border: 0;
+  
 }
 
 .welcome-text {
   text-align: center;
   color: #C3C1CC;
-  padding: 25%;
 }

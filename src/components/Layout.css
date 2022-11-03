@@ -37,3 +37,19 @@
     border-width: 0.5px;
 }
 
+.logo {
+    height: 60%;
+}
+
+.top-container {
+    height: 20%;
+    position: relative;
+}
+
+.chat-container {
+    position: fixed;
+    background-color: white;
+    height: 80%;
+    width: 80%;
+    right: 0%;
+}
