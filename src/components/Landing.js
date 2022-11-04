@@ -16,10 +16,12 @@ function Landing () {
          <a href="#"># pdfs</a>
        </div>
       </div>
+      {/* <Layout/> */}
       <div className='chat-container'>
       <form className='searchchat'>
         <input className='input-searchchat' type="text" placeholder="  Search chat..."></input>
       </form>
+      
       <Home/>
       </div>
     </div>

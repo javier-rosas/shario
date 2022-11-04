@@ -47,13 +47,14 @@ const ChatApp = ({ socket, username, room }) => {
           })}
       </div>
 
+      
       <div className="chatbar" >
       <table className='chatbox-buttons'>
       <th><input type="image" alt="pencil" src="/images/pencil.png"/></th>
       <th><input type="image" alt="microphone" src="/images/microphone.png"/></th>
       <th><input type="image" alt="docup" src="/images/docup.png"/></th>
       <th><input type="image" alt="photo" src="/images/photo.png"/></th>
-      <th>
+      <th className="inputbox-tablecell">
       <input
           className="inputbox"
           type="text"
@@ -67,10 +68,12 @@ const ChatApp = ({ socket, username, room }) => {
           }}
         />
       </th>
-      <th><button onClick={sendMessage}>&#9658;</button></th>
+      <th><button className="submit-btn" onClick={sendMessage}><img className="submit-btn-img" src="/images/submit.png"></img></button></th>
       </table>
       </div>
-
+      
+        
+      
     </div>
   );
 }
