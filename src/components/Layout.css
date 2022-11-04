@@ -1,0 +1,55 @@
+.side-bar {
+    box-sizing: border-box;
+
+    /* Auto layout */
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+    background-color: #FFFFFF !important;
+    background: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    display: flex;
+    align-self: flex-end;
+    height:85%;
+    position: fixed !important;
+    bottom: 0 !important;
+}
+
+
+.side-bar-menu {
+    background-color: #FFFFFF !important;
+    align-self: flex-end;
+}
+
+.sc-dkrFOg{
+    background-color: #FFFFFF !important;
+}
+
+.collapse-btn {
+    border-radius: 3rem;
+    background-color: white;
+    border-width: 0.5px;
+}
+
+.logo {
+    height: 60%;
+}
+
+.top-container {
+    height: 20%;
+    position: relative;
+}
+
+.chat-container {
+    position: fixed;
+    background-color: white;
+    height: 80%;
+    width: 80%;
+    right: 0%;
+}
