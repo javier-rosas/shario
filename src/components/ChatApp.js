@@ -1,9 +1,6 @@
 import React, { useEffect, useState } from "react"
-import ScrollToBottom from "react-scroll-to-bottom"
 import './Home.css'
 import '../App.css'
-import ChatBubble from 'react-chat-bubble';
-
 
 const ChatApp = ({ socket, username, room }) => {
 
@@ -22,7 +19,6 @@ const ChatApp = ({ socket, username, room }) => {
           new Date(Date.now()).getMinutes(),
       }
       await socket.emit("send_message", messageData)
-      console.log("send message", messageData)
       setMessageList((list) => [...list, messageData])
       setCurrentMessage("")
     }
@@ -30,11 +26,10 @@ const ChatApp = ({ socket, username, room }) => {
 
   useEffect(() => {
     socket.on('receive_message', (data) => {
-      console.log("received message:", data)
       setMessageList((list) => [...list, data])
     })
-  }, []);
-console.log(messageList)
+  }, [])
+
   return (
     <div className="main">
       <div className="messageList">
@@ -52,7 +47,6 @@ console.log(messageList)
           })}
       </div>
 
-      
       <div className="chatbar" >
       <table className='chatbox-buttons'>
       <th><input type="image" alt="pencil" src="/images/pencil.png"/></th>
@@ -76,9 +70,6 @@ console.log(messageList)
       <th><button className="submit-btn" onClick={sendMessage}><img className="submit-btn-img" src="/images/submit.png"></img></button></th>
       </table>
       </div>
-      
-        
-      
     </div>
   );
 }

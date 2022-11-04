@@ -1,13 +1,13 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 import MessageDataService from '../services/messageService'
 
+
 // initial state
 const initialState = {
   messages: [],
   status: 'idle',
   error: null
 }
-
 
 // get Messages
 export const apiGetMessages = createAsyncThunk(
@@ -22,6 +22,7 @@ export const apiGetMessages = createAsyncThunk(
       return rejectWithValue(e.response.data)
     }
 })
+
 
 // add Message
 export const apiAddMessage = createAsyncThunk(
@@ -50,8 +51,7 @@ export const apiAuthenticateUser = createAsyncThunk(
       if (!e.response) throw e
       return rejectWithValue(e.response.data)
     }
-  }
-)
+})
 
 
 // delete Message
