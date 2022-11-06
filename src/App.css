@@ -15,18 +15,14 @@ html, body, #root {
 
 .inputbox {
  background-color: white;
- width: 100%;
+ 
  border-color: white;
  border: 0ch;
  position: inline;
 }
 
-*:focus{
-  outline: none;
-}
-
 .chatbar {
-  width: 75%;
+  width: 80%;
   bottom: 0;
   background-color: white;
   position: fixed;
@@ -35,7 +31,7 @@ html, body, #root {
   border-radius: 1rem;
   border-width: 0.001rem;
   margin-bottom: 2%;
-  right: 2rem;
+  margin-right: 2%;
 }
 
 .image-photo-btn {
@@ -65,26 +61,4 @@ position: fixed;
 .welcome-text {
   text-align: center;
   color: #C3C1CC;
-}
-
-.submit-btn {
-  border: none;
-  background-color: transparent;
-}
-
-.submit-btn:hover {
-  background-color: #EFEFEF;
-}
-
-.submit-btn-img {
-  height: 35px;
-  width: 35px;
-}
-
-.chatbox-buttons {
-  width: 100%;
-}
-
-.inputbox-tablecell {
-  width: 70%;
 }
