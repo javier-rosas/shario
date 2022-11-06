@@ -1,14 +1,9 @@
 import io from "socket.io-client"
 import { useState } from "react"
-<<<<<<< HEAD
-import Chat from "./Chat.js"
 import React from 'react'
 
-const socket = io.connect("http://localhost:5001")
-=======
 import ChatApp from "./ChatApp.js"
 const socket = io.connect("http://192.168.4.23:5001")
->>>>>>> 6dd5c211aa48df1236680a8fbe04bdea95643924
 
 
 const Home = () => {

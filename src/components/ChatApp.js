@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react"
-import ScrollToBottom from "react-scroll-to-bottom"
 import './Home.css'
 import '../App.css'
-import ChatBubble from 'react-chat-bubble';
 
 
 const ChatApp = ({ socket, username, room }) => {
