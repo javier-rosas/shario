@@ -38,7 +38,9 @@
 }
 
 .logo {
-    height: 60%;
+    height: 80%;
+    padding-left: 2.5%;
+    padding-top: 1.5%;
 }
 
 .top-container {
@@ -53,3 +55,33 @@
     width: 80%;
     right: 0%;
 }
+
+.side-bar-new {
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+    position: fixed;
+    left: 0%;
+    height: 80%;
+    width: 19%;
+    border-radius: 0.5rem;
+
+}
+
+.vertical-menu {
+    width: ; /* Set a width if you like */
+    left: 50%;
+  }
+  
+  .vertical-menu a {
+    color: black; /* Black text color */
+    display: block; /* Make the links appear below each other */
+    padding: 10%; /* Add some padding */
+    left: 50%;
+    text-decoration: none; /* Remove underline from links */
+  }
+  
+  .vertical-menu a:hover {
+    background-color: #EFEFEF; /* Dark grey background on mouse-over */
+  }
+  
