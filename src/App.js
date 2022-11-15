@@ -9,11 +9,9 @@ function App() {
 
   return (
       <Routes>
-        <Route exact path="/"> </Route> 
+        <Route exact path="/" element={<Landing/>}> </Route> 
         <Route exact path="/home" component={<Home/>}> </Route>
         <Route exact path="/conversion" component={<Conversion/>}> </Route>
-        <Route exact path="/" element={<Landing/>}> </Route> 
-        <Route exact path="/home" element={<Home/>}> </Route> 
       </Routes>
   );
 }
