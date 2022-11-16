@@ -1,5 +1,7 @@
 import Layout from './Layout'
 import Home from './Home'
+import React from 'react'
+
 
 function Landing () {
 
